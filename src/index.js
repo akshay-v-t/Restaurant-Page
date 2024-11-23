@@ -1,6 +1,7 @@
 import renderMenu from "./menu";
 import renderAbout from "./about";
 import "./style.css"
+import headerImg from "./header-img.jpg"
 
 const navButtons = document.querySelectorAll('button');
 const content = document.querySelector("#content");
@@ -54,6 +55,8 @@ const introText = document.createElement('p');
 const hoursSection = document.createElement("div");
 const hoursHead = document.createElement('h2')
 const timings = document.createElement('p');
+const img = document.createElement("img")
+img.src = headerImg;
 
 
 
@@ -72,8 +75,10 @@ Saturday: 8am - 10pm`;
 introSection.classList.add("inner-section");
 heading.innerText = "Welcome to Golden Wok";
 content.appendChild(heading)
+content.appendChild(img)
 content.appendChild(introSection);
 introSection.appendChild(introText);
+
 content.appendChild(hoursSection);
 
 hoursSection.appendChild(hoursHead);
